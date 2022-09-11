@@ -1,3 +1,4 @@
+#Команды
 out1 = {"next": bytes.fromhex("63 69 72 20 31 65 0D 0A"),
         "prev": bytes.fromhex("63 69 72 20 31 64 0D 0A"),
         "inp1": bytes.fromhex("63 69 72 20 30 30 0D 0A"),
