@@ -1,0 +1,21 @@
+{
+  "dev_ipport": "192.168.0.221:8899",
+  "command_templates": [
+    {
+      "command": [
+        "btnOut3_inp1",
+        "btnOut3_inp2"
+      ],
+      "caption": "nnn222"
+    },
+    {
+      "command": [
+        "btnOut3_inp1"
+      ],
+      "caption": "tessst2222"
+    }
+  ],
+  "help": [
+    " ipport     - адрес:порт для управления"
+  ]
+}

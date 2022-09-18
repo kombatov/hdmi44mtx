@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>398</width>
-    <height>400</height>
+    <height>443</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -23,144 +23,6 @@
    <string>Управление</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0">
-    <widget class="QLabel" name="labelRC">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>14</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>HDMI Matrix</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="0">
-    <widget class="QFrame" name="frameOut1">
-     <property name="font">
-      <font>
-       <strikeout>false</strikeout>
-      </font>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::Box</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Sunken</enum>
-     </property>
-     <property name="midLineWidth">
-      <number>0</number>
-     </property>
-     <layout class="QGridLayout" name="gridLayout_2">
-      <item row="0" column="1">
-       <widget class="QPushButton" name="btnOut1_prev">
-        <property name="font">
-         <font>
-          <strikeout>false</strikeout>
-          <kerning>true</kerning>
-         </font>
-        </property>
-        <property name="text">
-         <string>&lt;</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="2">
-       <widget class="QPushButton" name="btnOut1_next">
-        <property name="font">
-         <font>
-          <strikeout>false</strikeout>
-          <kerning>true</kerning>
-         </font>
-        </property>
-        <property name="text">
-         <string>&gt;</string>
-        </property>
-        <property name="default">
-         <bool>false</bool>
-        </property>
-        <property name="flat">
-         <bool>false</bool>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="3">
-       <widget class="QLabel" name="lbOut1">
-        <property name="font">
-         <font>
-          <pointsize>10</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>output 1</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QPushButton" name="btnOut1_inp1">
-        <property name="font">
-         <font>
-          <strikeout>false</strikeout>
-          <kerning>true</kerning>
-         </font>
-        </property>
-        <property name="text">
-         <string>1</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QPushButton" name="btnOut1_inp2">
-        <property name="font">
-         <font>
-          <strikeout>false</strikeout>
-          <kerning>true</kerning>
-         </font>
-        </property>
-        <property name="text">
-         <string>2</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="2">
-       <widget class="QPushButton" name="btnOut1_inp3">
-        <property name="font">
-         <font>
-          <strikeout>false</strikeout>
-          <kerning>true</kerning>
-         </font>
-        </property>
-        <property name="text">
-         <string>3</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="3">
-       <widget class="QPushButton" name="btnOut1_inp4">
-        <property name="font">
-         <font>
-          <strikeout>false</strikeout>
-          <kerning>true</kerning>
-         </font>
-        </property>
-        <property name="text">
-         <string>4</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
    <item row="2" column="0">
     <widget class="QFrame" name="frameOut2">
      <property name="sizePolicy">
@@ -184,6 +46,32 @@
       <number>0</number>
      </property>
      <layout class="QGridLayout" name="gridLayout_3">
+      <item row="1" column="2">
+       <widget class="QPushButton" name="btnOut2_inp3">
+        <property name="font">
+         <font>
+          <strikeout>false</strikeout>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>3</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="btnOut2_inp1">
+        <property name="font">
+         <font>
+          <strikeout>false</strikeout>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </widget>
+      </item>
       <item row="0" column="1">
        <widget class="QPushButton" name="btnOut2_prev">
         <property name="font">
@@ -194,6 +82,33 @@
         </property>
         <property name="text">
          <string>&lt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="btnOut2_inp2">
+        <property name="font">
+         <font>
+          <strikeout>false</strikeout>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLabel" name="lbOut2">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>output 2</string>
         </property>
        </widget>
       </item>
@@ -216,179 +131,8 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="3">
-       <widget class="QLabel" name="lbOut2">
-        <property name="font">
-         <font>
-          <pointsize>10</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>output 2</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QPushButton" name="btnOut2_inp1">
-        <property name="font">
-         <font>
-          <strikeout>false</strikeout>
-          <kerning>true</kerning>
-         </font>
-        </property>
-        <property name="text">
-         <string>1</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QPushButton" name="btnOut2_inp2">
-        <property name="font">
-         <font>
-          <strikeout>false</strikeout>
-          <kerning>true</kerning>
-         </font>
-        </property>
-        <property name="text">
-         <string>2</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="2">
-       <widget class="QPushButton" name="btnOut2_inp3">
-        <property name="font">
-         <font>
-          <strikeout>false</strikeout>
-          <kerning>true</kerning>
-         </font>
-        </property>
-        <property name="text">
-         <string>3</string>
-        </property>
-       </widget>
-      </item>
       <item row="1" column="3">
        <widget class="QPushButton" name="btnOut2_inp4">
-        <property name="font">
-         <font>
-          <strikeout>false</strikeout>
-          <kerning>true</kerning>
-         </font>
-        </property>
-        <property name="text">
-         <string>4</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="3" column="0">
-    <widget class="QFrame" name="frameOut3">
-     <property name="font">
-      <font>
-       <strikeout>false</strikeout>
-      </font>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::Box</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Sunken</enum>
-     </property>
-     <property name="midLineWidth">
-      <number>0</number>
-     </property>
-     <layout class="QGridLayout" name="gridLayout_4">
-      <item row="0" column="1">
-       <widget class="QPushButton" name="btnOut3_prev">
-        <property name="font">
-         <font>
-          <strikeout>false</strikeout>
-          <kerning>true</kerning>
-         </font>
-        </property>
-        <property name="text">
-         <string>&lt;</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="2">
-       <widget class="QPushButton" name="btnOut3_next">
-        <property name="font">
-         <font>
-          <strikeout>false</strikeout>
-          <kerning>true</kerning>
-         </font>
-        </property>
-        <property name="text">
-         <string>&gt;</string>
-        </property>
-        <property name="default">
-         <bool>false</bool>
-        </property>
-        <property name="flat">
-         <bool>false</bool>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="3">
-       <widget class="QLabel" name="lbOut3">
-        <property name="font">
-         <font>
-          <pointsize>10</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>output 3</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QPushButton" name="btnOut3_inp1">
-        <property name="font">
-         <font>
-          <strikeout>false</strikeout>
-          <kerning>true</kerning>
-         </font>
-        </property>
-        <property name="text">
-         <string>1</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QPushButton" name="btnOut3_inp2">
-        <property name="font">
-         <font>
-          <strikeout>false</strikeout>
-          <kerning>true</kerning>
-         </font>
-        </property>
-        <property name="text">
-         <string>2</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="2">
-       <widget class="QPushButton" name="btnOut3_inp3">
-        <property name="font">
-         <font>
-          <strikeout>false</strikeout>
-          <kerning>true</kerning>
-         </font>
-        </property>
-        <property name="text">
-         <string>3</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="3">
-       <widget class="QPushButton" name="btnOut3_inp4">
         <property name="font">
          <font>
           <strikeout>false</strikeout>
@@ -521,16 +265,380 @@
      </layout>
     </widget>
    </item>
+   <item row="3" column="0">
+    <widget class="QFrame" name="frameOut3">
+     <property name="font">
+      <font>
+       <strikeout>false</strikeout>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="midLineWidth">
+      <number>0</number>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="1">
+       <widget class="QPushButton" name="btnOut3_prev">
+        <property name="font">
+         <font>
+          <strikeout>false</strikeout>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>&lt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="btnOut3_next">
+        <property name="font">
+         <font>
+          <strikeout>false</strikeout>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>&gt;</string>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLabel" name="lbOut3">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>output 3</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="btnOut3_inp1">
+        <property name="font">
+         <font>
+          <strikeout>false</strikeout>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="btnOut3_inp2">
+        <property name="font">
+         <font>
+          <strikeout>false</strikeout>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="btnOut3_inp3">
+        <property name="font">
+         <font>
+          <strikeout>false</strikeout>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>3</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QPushButton" name="btnOut3_inp4">
+        <property name="font">
+         <font>
+          <strikeout>false</strikeout>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>4</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QFrame" name="frameLabel">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>28</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>28</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="labelRC">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>HDMI Matrix</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSettings">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>82</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>82</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Настройки</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QFrame" name="frameOut1">
+     <property name="font">
+      <font>
+       <strikeout>false</strikeout>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="midLineWidth">
+      <number>0</number>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="1">
+       <widget class="QPushButton" name="btnOut1_prev">
+        <property name="font">
+         <font>
+          <strikeout>false</strikeout>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>&lt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLabel" name="lbOut1">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>output 1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="btnOut1_inp2">
+        <property name="font">
+         <font>
+          <strikeout>false</strikeout>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QPushButton" name="btnOut1_inp4">
+        <property name="font">
+         <font>
+          <strikeout>false</strikeout>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>4</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="btnOut1_inp3">
+        <property name="font">
+         <font>
+          <strikeout>false</strikeout>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>3</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="btnOut1_next">
+        <property name="font">
+         <font>
+          <strikeout>false</strikeout>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>&gt;</string>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="btnOut1_inp1">
+        <property name="font">
+         <font>
+          <strikeout>false</strikeout>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
   </layout>
   <action name="ActClick">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
    <property name="text">
     <string>ActClick</string>
    </property>
   </action>
+  <action name="ActSettings">
+   <property name="text">
+    <string>ActSettings</string>
+   </property>
+   <property name="toolTip">
+    <string>Настройки шаблонов и др</string>
+   </property>
+  </action>
  </widget>
+ <tabstops>
+  <tabstop>btnSettings</tabstop>
+  <tabstop>btnOut1_prev</tabstop>
+  <tabstop>btnOut1_next</tabstop>
+  <tabstop>btnOut1_inp1</tabstop>
+  <tabstop>btnOut1_inp2</tabstop>
+  <tabstop>btnOut1_inp3</tabstop>
+  <tabstop>btnOut1_inp4</tabstop>
+  <tabstop>btnOut2_prev</tabstop>
+  <tabstop>btnOut2_next</tabstop>
+  <tabstop>btnOut2_inp1</tabstop>
+  <tabstop>btnOut2_inp2</tabstop>
+  <tabstop>btnOut2_inp3</tabstop>
+  <tabstop>btnOut2_inp4</tabstop>
+  <tabstop>btnOut3_prev</tabstop>
+  <tabstop>btnOut3_next</tabstop>
+  <tabstop>btnOut3_inp1</tabstop>
+  <tabstop>btnOut3_inp2</tabstop>
+  <tabstop>btnOut3_inp3</tabstop>
+  <tabstop>btnOut3_inp4</tabstop>
+  <tabstop>btnOut4_prev</tabstop>
+  <tabstop>btnOut4_next</tabstop>
+  <tabstop>btnOut4_inp1</tabstop>
+  <tabstop>btnOut4_inp2</tabstop>
+  <tabstop>btnOut4_inp3</tabstop>
+  <tabstop>btnOut4_inp4</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
@@ -540,8 +648,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>155</x>
+     <y>81</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -556,24 +664,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btnOut1_inp1</sender>
-   <signal>clicked()</signal>
-   <receiver>ActClick</receiver>
-   <slot>trigger()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>280</x>
+     <y>81</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -588,8 +680,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>155</x>
+     <y>114</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -604,8 +696,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>280</x>
+     <y>114</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -620,8 +712,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>376</x>
+     <y>114</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -636,8 +728,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>155</x>
+     <y>171</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -652,8 +744,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>280</x>
+     <y>171</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -668,8 +760,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>40</x>
+     <y>205</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -684,8 +776,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>155</x>
+     <y>205</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -700,8 +792,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>280</x>
+     <y>205</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -716,8 +808,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>376</x>
+     <y>205</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -732,8 +824,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>155</x>
+     <y>261</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -748,8 +840,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>280</x>
+     <y>261</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -764,8 +856,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>40</x>
+     <y>295</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -780,8 +872,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>155</x>
+     <y>295</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -796,8 +888,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>280</x>
+     <y>295</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -812,8 +904,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>376</x>
+     <y>295</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -828,8 +920,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>149</x>
+     <y>355</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -844,8 +936,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>280</x>
+     <y>355</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -860,8 +952,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>40</x>
+     <y>392</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -876,8 +968,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>149</x>
+     <y>392</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -892,8 +984,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>280</x>
+     <y>392</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -908,8 +1000,40 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>376</x>
+     <y>392</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnSettings</sender>
+   <signal>clicked()</signal>
+   <receiver>ActSettings</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>382</x>
+     <y>22</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnOut1_inp1</sender>
+   <signal>clicked()</signal>
+   <receiver>ActClick</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>62</x>
+     <y>115</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
