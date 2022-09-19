@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import sys
+import time
 from PyQt5 import QtWidgets, QtCore, QtGui, uic
 import socket
 import res.hdmi_const as hdmi_const
@@ -74,6 +75,7 @@ class main_window(QtWidgets.QWidget):
                 self.sock.send(hdmi_const.outs[int(valout)][valinp])
             except:
                 self.TryConnected()
+            time.sleep(1)
 
 
 mainset = ClassMainSettings.MainSet()
