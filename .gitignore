@@ -1,6 +1,0 @@
-*
-!/res/
-!/res/*.py
-!/res/*.ui
-!/*.py
-!/*.json
