@@ -14,8 +14,8 @@ class main_window(QtWidgets.QWidget):
         self.LoadMainUi()
 
         self.__labelRCdefault = self.labelRC.text()
-        self.ActClick.triggered.connect(self.ActClickImpl)
-        self.ActSettings.triggered.connect(self.ActClickSettings)
+        self.ActClick.triggered.connect(self.ActClickExecute)
+        self.ActMenu.triggered.connect(self.ActMenuExecute)
         self.sock = socket.socket()
         self.sock.settimeout(2)
         self.TryConnected()
@@ -43,34 +43,35 @@ class main_window(QtWidgets.QWidget):
             __pal.setColor(QtGui.QPalette.WindowText, QtGui.QColor("red"))
         self.labelRC.setPalette(__pal)
 
-    def ActClickImpl(self):
+    def ActClickExecute(self):
         self.PushButtons([self.ActClick.sender().objectName()])
 
-    def ActClickSettings(self):
+    def ActMenuExecute(self):
         contextMenu = QtWidgets.QMenu(self)
-        ActSettingsQuit = contextMenu.addAction("Выход")
-        ActSettingsQuit.triggered.connect(self.close)
-        ActSettingsSets = contextMenu.addAction("Настройки")
+        ActMenuQuit = contextMenu.addAction("Выход")
+        ActMenuQuit.triggered.connect(self.close)
+        ActMenuSets = contextMenu.addAction("Настройки")
         contextMenu.addSeparator()
         for i in range(len(mainset.command_templates)):
             newact = QtWidgets.QAction(mainset.command_templates[i]["caption"], contextMenu)
-            newact.setData(i)
-            newact.triggered.connect(self.ActTemplateApply)
+            newact.setData(i) # номер команды в списке
+            newact.triggered.connect(self.ActTemplateExecute)
             contextMenu.addAction(newact)
-        contextMenu.popup(self.mapToGlobal(self.btnSettings.pos()))
+        # позиционируем по координатам относительно главного окна
+        contextMenu.popup(self.mapToGlobal(self.btnMenu.pos()))
 
-    def ActTemplateApply(self):
-        num_command = self.sender().data()
-        list_command =mainset.command_templates[num_command]["command"]
+    def ActTemplateExecute(self):
+        num_command = self.sender().data()  # номер команды в списке
+        list_command = mainset.command_templates[num_command]["command"]
         self.PushButtons(list_command)
 
     def PushButtons(self, arrNames):
         if not self.__connected:
             self.TryConnected()
         for curname in arrNames:
-            __valout, __valinp = curname.lower()[6:].split("_")
+            valout, valinp = curname.lower()[6:].split("_")
             try:
-                self.sock.send(hdmi_const.outs[int(__valout)][__valinp])
+                self.sock.send(hdmi_const.outs[int(valout)][valinp])
             except:
                 self.TryConnected()
 

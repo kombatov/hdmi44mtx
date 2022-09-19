@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>398</width>
-    <height>443</height>
+    <width>358</width>
+    <height>438</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -105,6 +105,7 @@
           <pointsize>10</pointsize>
           <weight>75</weight>
           <bold>true</bold>
+          <strikeout>false</strikeout>
          </font>
         </property>
         <property name="text">
@@ -203,6 +204,7 @@
           <pointsize>10</pointsize>
           <weight>75</weight>
           <bold>true</bold>
+          <strikeout>false</strikeout>
          </font>
         </property>
         <property name="text">
@@ -321,6 +323,7 @@
           <pointsize>10</pointsize>
           <weight>75</weight>
           <bold>true</bold>
+          <strikeout>false</strikeout>
          </font>
         </property>
         <property name="text">
@@ -452,7 +455,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="btnSettings">
+       <widget class="QPushButton" name="btnMenu">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
           <horstretch>0</horstretch>
@@ -472,7 +475,7 @@
          </size>
         </property>
         <property name="text">
-         <string>Настройки</string>
+         <string>Меню</string>
         </property>
        </widget>
       </item>
@@ -516,6 +519,7 @@
           <pointsize>10</pointsize>
           <weight>75</weight>
           <bold>true</bold>
+          <strikeout>false</strikeout>
          </font>
         </property>
         <property name="text">
@@ -603,9 +607,9 @@
     <string>ActClick</string>
    </property>
   </action>
-  <action name="ActSettings">
+  <action name="ActMenu">
    <property name="text">
-    <string>ActSettings</string>
+    <string>ActMenu</string>
    </property>
    <property name="toolTip">
     <string>Настройки шаблонов и др</string>
@@ -613,7 +617,7 @@
   </action>
  </widget>
  <tabstops>
-  <tabstop>btnSettings</tabstop>
+  <tabstop>btnMenu</tabstop>
   <tabstop>btnOut1_prev</tabstop>
   <tabstop>btnOut1_next</tabstop>
   <tabstop>btnOut1_inp1</tabstop>
@@ -1010,9 +1014,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>btnSettings</sender>
+   <sender>btnMenu</sender>
    <signal>clicked()</signal>
-   <receiver>ActSettings</receiver>
+   <receiver>ActMenu</receiver>
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
