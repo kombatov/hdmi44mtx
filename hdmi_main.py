@@ -55,16 +55,15 @@ class main_window(QtWidgets.QWidget):
         contextMenu.addSeparator()
         for i in range(len(mainset.command_templates)):
             newact = QtWidgets.QAction(mainset.command_templates[i]["caption"], contextMenu)
-            newact.setData(i) # номер команды в списке
+            newact.setData(mainset.command_templates[i]["command"])  # список команд сохраняем в data
             newact.triggered.connect(self.ActTemplateExecute)
             contextMenu.addAction(newact)
         # позиционируем по координатам относительно главного окна
         contextMenu.popup(self.mapToGlobal(self.btnMenu.pos()))
 
     def ActTemplateExecute(self):
-        num_command = self.sender().data()  # номер команды в списке
-        list_command = mainset.command_templates[num_command]["command"]
-        self.PushButtons(list_command)
+        # список команд приколочен к акшену
+        self.PushButtons(self.sender().data())
 
     def PushButtons(self, arrNames):
         if not self.__connected:
