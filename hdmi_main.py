@@ -6,32 +6,37 @@ from PyQt5 import QtWidgets, QtCore, QtGui, uic
 import socket
 import res.hdmi_const as hdmi_const
 import ClassMainSettings
+import SetsWindow
 
-class main_window(QtWidgets.QWidget):
+
+class MainWindow(QtWidgets.QWidget):
     def __init__(self, parent=None):
         self.__connected = False
         QtWidgets.QWidget.__init__(self, parent)
-
-        self.LoadMainUi()
+        self.contextMenu = None
+        self.uiFile = None
+        self.load_ui(self, 'main.ui')
+        # Признак необходимости пересобрать всплывающее меню
+        self.bNeedMenuRecreate = True
 
         self.__labelRCdefault = self.labelRC.text()
-        self.ActClick.triggered.connect(self.ActClickExecute)
-        self.ActMenu.triggered.connect(self.ActMenuExecute)
+        self.ActClick.triggered.connect(self.act_click_execute)
+        self.ActMenu.triggered.connect(self.act_menu_show_execute)
         self.sock = socket.socket()
         self.sock.settimeout(2)
-        self.TryConnected()
+        self.try_connected()
 
     def __del__(self):
         self.sock.close()
 
-    def LoadMainUi(self):
-        #uic.loadUi('res/hdmi_rc.ui', self)
+    def load_ui(self, curform, uifilename):
+        # uic.loadUi('res/hdmi_rc.ui', self)
         QtCore.QDir.addSearchPath('dir_ui', 'res')
-        self.uiFile = QtCore.QFile("dir_ui:main.ui")
+        self.uiFile = QtCore.QFile("dir_ui:"+uifilename)
         self.uiFile.open(QtCore.QFile.ReadOnly)
-        uic.loadUi(self.uiFile, self)
+        uic.loadUi(self.uiFile, curform)
 
-    def TryConnected(self):
+    def try_connected(self):
         __pal = self.labelRC.palette()
         try:
             self.sock.connect((mainset.dev_ip, mainset.dev_port))
@@ -44,28 +49,42 @@ class main_window(QtWidgets.QWidget):
             __pal.setColor(QtGui.QPalette.WindowText, QtGui.QColor("red"))
         self.labelRC.setPalette(__pal)
 
-    def ActClickExecute(self):
-        self.PushButtons([self.ActClick.sender().objectName()])
+    def act_click_execute(self):
+        self.push_buttons([self.ActClick.sender().objectName()])
 
-    def ActMenuExecute(self):
-        contextMenu = QtWidgets.QMenu(self)
-        ActMenuQuit = contextMenu.addAction("Выход")
+    def act_menu_recreate_execute(self):
+        del self.contextMenu
+        self.contextMenu = QtWidgets.QMenu(self)
+        ActMenuQuit = self.contextMenu.addAction("Выход")
         ActMenuQuit.triggered.connect(self.close)
-        ActMenuSets = contextMenu.addAction("Настройки")
-        contextMenu.addSeparator()
-        for i in range(len(mainset.command_templates)):
-            newact = QtWidgets.QAction(mainset.command_templates[i]["caption"], contextMenu)
-            newact.setData(mainset.command_templates[i]["command"])  # список команд сохраняем в data
-            newact.triggered.connect(self.ActTemplateExecute)
-            contextMenu.addAction(newact)
+        ActMenuSets = self.contextMenu.addAction("Настройки")
+        ActMenuSets.triggered.connect(self.act_menu_sets_execute)
+        self.contextMenu.addSeparator()
+        for i in range(len(mainset.command_list)):
+            newact = QtWidgets.QAction(mainset.command_list[i]["caption"], self.contextMenu)
+            newact.setData(mainset.command_list[i]["command"])  # список команд сохраняем в data
+            newact.triggered.connect(self.act_menu_list_execute)
+            self.contextMenu.addAction(newact)
+
+    # Отображение всплывающего меню
+    def act_menu_show_execute(self):
+        if self.bNeedMenuRecreate:
+            self.act_menu_recreate_execute()
+            self.bNeedMenuRecreate = False
         # позиционируем по координатам относительно главного окна
-        contextMenu.popup(self.mapToGlobal(self.btnMenu.pos()))
+        self.contextMenu.popup(self.mapToGlobal(self.btnMenu.pos()))
 
-    def ActTemplateExecute(self):
+    # Форма настроек
+    def act_menu_sets_execute(self):
+        formsw = SetsWindow.SetsWindow(parent=self)
+        formsw.exec_()
+
+    # Акшен выполнения команды нажатия настраиваемого пункта меню
+    def act_menu_list_execute(self):
         # список команд приколочен к акшену
-        self.PushButtons(self.sender().data())
+        self.push_buttons(self.sender().data())
 
-    def PushButtons(self, arrNames):
+    def push_buttons(self, arrNames):
         if not self.__connected:
             self.TryConnected()
         for curname in arrNames:
@@ -77,11 +96,12 @@ class main_window(QtWidgets.QWidget):
             time.sleep(1)
 
 
-mainset = ClassMainSettings.MainSet()
-try:
-    app = QtWidgets.QApplication([])
-    win = main_window()
-    win.show()
-    sys.exit(app.exec())
-finally:
-    del mainset
+if __name__ == "__main__":
+    mainset = ClassMainSettings.MainSet()
+    try:
+        app = QtWidgets.QApplication([])
+        win = MainWindow()
+        win.show()
+        sys.exit(app.exec())
+    finally:
+        del mainset

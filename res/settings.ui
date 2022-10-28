@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>340</width>
-    <height>311</height>
+    <height>321</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -174,7 +174,23 @@
     </widget>
    </item>
    <item>
-    <widget class="QFrame" name="frameTemplate">
+    <widget class="QFrame" name="frameCommand">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="frameSaveClose">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>50</height>
+      </size>
+     </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>

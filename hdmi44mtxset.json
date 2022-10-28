@@ -1,6 +1,6 @@
 {
   "dev_ipport": "192.168.0.221:8899",
-  "command_templates": [
+  "command_list": [
     {
       "command": [
         "btnOut3_inp1",
