@@ -2,11 +2,13 @@
 
 import sys
 import time
-from PyQt5 import QtWidgets, QtCore, QtGui, uic
+from PySide6 import QtWidgets, QtCore, QtGui
 import socket
 import res.hdmi_const as hdmi_const
 import ClassMainSettings
+from qtpy import uic
 import SetsWindow
+#import ui_loader
 
 
 class MainWindow(QtWidgets.QWidget):
@@ -15,7 +17,9 @@ class MainWindow(QtWidgets.QWidget):
         QtWidgets.QWidget.__init__(self, parent)
         self.contextMenu = None
         self.uiFile = None
-        self.load_ui(self, 'main.ui')
+        uic.loadUi('res/main.ui', self)
+        #ui_loader.load_ui('res/main.ui', self)
+
         # Признак необходимости пересобрать всплывающее меню
         self.bNeedMenuRecreate = True
 
@@ -28,13 +32,6 @@ class MainWindow(QtWidgets.QWidget):
 
     def __del__(self):
         self.sock.close()
-
-    def load_ui(self, curform, uifilename):
-        # uic.loadUi('res/hdmi_rc.ui', self)
-        QtCore.QDir.addSearchPath('dir_ui', 'res')
-        self.uiFile = QtCore.QFile("dir_ui:"+uifilename)
-        self.uiFile.open(QtCore.QFile.ReadOnly)
-        uic.loadUi(self.uiFile, curform)
 
     def try_connected(self):
         __pal = self.labelRC.palette()
@@ -61,7 +58,7 @@ class MainWindow(QtWidgets.QWidget):
         ActMenuSets.triggered.connect(self.act_menu_sets_execute)
         self.contextMenu.addSeparator()
         for i in range(len(mainset.command_list)):
-            newact = QtWidgets.QAction(mainset.command_list[i]["caption"], self.contextMenu)
+            newact = QtGui.QAction(mainset.command_list[i]["caption"], self.contextMenu)
             newact.setData(mainset.command_list[i]["command"])  # список команд сохраняем в data
             newact.triggered.connect(self.act_menu_list_execute)
             self.contextMenu.addAction(newact)
@@ -77,7 +74,7 @@ class MainWindow(QtWidgets.QWidget):
     # Форма настроек
     def act_menu_sets_execute(self):
         formsw = SetsWindow.SetsWindow(parent=self)
-        formsw.exec_()
+        formsw.exec()
 
     # Акшен выполнения команды нажатия настраиваемого пункта меню
     def act_menu_list_execute(self):
